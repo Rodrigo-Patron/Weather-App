@@ -1,1 +1,1 @@
-Simple Weather-App using React and weather API
+Simple Weather-App using React, Express and weather API
