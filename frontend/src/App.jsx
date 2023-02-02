@@ -28,7 +28,8 @@ const App = () => {
 
       {weather && (
         <h3>
-          The temperature of {weather.city} is {weather.temperature}°C{" "}
+          The current temperature of {weather.name}, {weather.country} is{" "}
+          {weather.temperature}°C{" "}
         </h3>
       )}
     </div>

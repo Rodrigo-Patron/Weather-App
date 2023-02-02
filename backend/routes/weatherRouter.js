@@ -18,12 +18,14 @@ weatherRouter.post("/", (req, res) => {
     config
   )
     .then((res) => res.json())
-    .then((result) =>
+    .then((result) => {
+      //   console.log(result);
       res.send({
-        city: req.body.city,
+        name: result.location.name,
+        country: result.location.country,
         temperature: result.current.temp_c,
-      })
-    )
+      });
+    })
     .catch((err) => console.error("error:" + err));
 });
 
