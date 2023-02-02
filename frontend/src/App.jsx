@@ -1,3 +1,4 @@
+import "./App.css";
 import { useRef, useState } from "react";
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
       <input type="text" ref={cityInputValue} placeholder="Search City" />
       <button onClick={submitHandler}>Submit</button>
 
