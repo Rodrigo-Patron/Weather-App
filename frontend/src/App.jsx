@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Form } from "react-bootstrap";
 import "./App.css";
 import { useRef, useState } from "react";
 
@@ -24,15 +26,24 @@ const App = () => {
 
   return (
     <div className="App">
-      <input type="text" ref={cityInputValue} placeholder="Search City" />
-      <button onClick={submitHandler}>Submit</button>
+      <div className="form">
+        <Form.Control
+          type="text"
+          ref={cityInputValue}
+          placeholder="Search City"
+        />
+        <Button onClick={submitHandler}>Submit</Button>
+      </div>
 
-      {weather && (
-        <h3>
-          The current temperature of {weather.name}, {weather.country} is{" "}
-          {weather.temperature}°C{" "}
-        </h3>
-      )}
+      <div className="output">
+        {weather && (
+          <h4>
+            The current temperature of {weather.name}, {weather.country} is:
+            <br />
+            <span>{weather.temperature}°C</span>
+          </h4>
+        )}
+      </div>
     </div>
   );
 };
