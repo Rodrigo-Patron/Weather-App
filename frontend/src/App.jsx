@@ -40,6 +40,7 @@ const App = () => {
           <h4>
             The current temperature of {weather.name}, {weather.country} is:
             <br />
+            <br />
             <span>{weather.temperature}°C</span>
           </h4>
         )}
